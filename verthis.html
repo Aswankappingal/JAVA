@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let user1={Name:"Shibli",Che:65,Phy:55,Math:70}
+        let user2={Name:"Ashiq",Che:55,Phy:55,Math:70}
+        let user3={Name:"Aswan",Che:75,Phy:25,Math:70}
+        let user4={Name:"shibu",Che:45,Phy:25,Math:70}
+        let user5={Name:"Aneesh",Che:25,Phy:35,Math:70}
+        data=function(){
+            console.log(` Name is ${this.Name} , And Mark of three subjects ${this.Che+this.Phy+this.Math}`);
+        }
+  
+  let  x=data
+  x.call(user1)
+  x.call(user2)
+  x.call(user3)
+  x.call(user4)
+  x.call(user5)
+
+    </script>
+  
+    
+</body>
+</html>

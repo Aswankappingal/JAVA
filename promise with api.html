@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">bbbb</button>
+    <div id="d"></div>
+    <script>
+        document.getElementById("btn").onclick=()=>{
+            fetch("https://jsonplaceholder.typicode.com/todos/1").then((resdata)=>resdata.json()).then((data)=>{
+       document.getElementById("d").innerHTML=data.title+""+data.id
+
+       }).catch((error)=>{
+        console.log(error);
+       })
+        }
+        
+            
+        
+      
+    
+
+       
+    </script>
+   
+</body>
+</html>

@@ -1,0 +1,14 @@
+.cardfull{
+    margin-top: 5% !important;
+    /* height: 400px; */
+    margin-left: 20%;
+    
+}
+.card-img-top{
+    height: 240px;
+    width: 100%;
+}
+.container-fluid a{
+    color: azure;
+
+}

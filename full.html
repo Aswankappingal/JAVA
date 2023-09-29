@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        body{
+            margin: 0px;
+        }
+        #date{
+            background-color: rgb(211, 211, 227);
+            padding: 30px;
+            border: none;
+            margin-top: 40%;
+        }
+        #date::placeholder{
+            font-size: 55px;
+        }
+        #full{
+           background-color: bisque;
+           height: 700px;
+        }
+        input{
+            font-size: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div style="text-align: center;" id="full">   
+        
+    <input placeholder="DD-MM-YYYY" type="text" id="date" onkeyup="myfunction(this)">
+    <span id="str"></span>
+</div>
+<script>
+    let data=document.getElementById("date");
+
+    function myfunction(arg) {
+        console.log(arg.value);
+        const dt=validate(arg.value);
+        console.log(dt);
+        if (dt){
+            document.getElementById("str").innerHTML=dt
+        }
+            
+        else{
+            document.getElementById("str").innerHTML=dt
+
+
+        }
+    }
+
+        
+    
+    function validate(value) {
+        let regx=/(^[012]?\d|3[01])-([0]?\d|1[012])-(\d{4})$/i;
+        let result=regx.test(value);
+        return result?"":"invalid string"
+        
+    }
+</script>
+
+
+
+    
+</body>
+</html>
